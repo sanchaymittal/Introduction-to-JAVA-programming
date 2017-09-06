@@ -1,0 +1,30 @@
+/*
+Q5. (Find the number of years) 
+Write a program that prompts the user to enter the minutes(e.g., 1 billion)
+and displays the number of years and days for the minutes. 
+For simplicity, assume a year has 365 days
+*/
+import java.util.Scanner;
+
+class q5
+{
+
+public static void main(String args[])
+{
+
+Scanner sc= new Scanner(System.in);
+
+int min,years,days;
+System.out.print("Enter Minutes : ");
+min = sc.nextInt();
+
+days = (min/60)/24;          //Number of days
+
+years = days/365;      
+
+days = days%365;
+
+System.out.print("Years : "+years+"\ndays : "+days);
+}
+}
+
