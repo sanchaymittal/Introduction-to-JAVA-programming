@@ -1,4 +1,5 @@
-/*Q2: (Compute the volume of a cylinder) 
+/*
+Q2: (Compute the volume of a cylinder) 
 Write a program that reads in the radius and length of a cylinder and computes the area and volume using the following formulas:
 area = radius * radius * pi
 volume = area * length
