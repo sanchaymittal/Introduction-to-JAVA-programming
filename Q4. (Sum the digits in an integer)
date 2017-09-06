@@ -1,0 +1,28 @@
+/*
+Q4. (Sum the digits in an integer)
+Write a program that reads an integer between 0 and 1000 and adds all the digits in the integer.
+For example, if an integer is 932, the sum of all its digits is 14.
+*/
+
+import java.util.Scanner;
+
+class q4{
+
+public static void main(String args[]){
+
+Scanner sc = new Scanner(System.in);
+
+int number,sum=0;
+
+System.out.print("Enter a number between 1 and 1000 : ");
+number = sc.nextInt();		 	    			//Example : 932	 
+sum+= number%10;                            			//Unit digit = 2 | Sum =  2 
+number/=10;							//number = 93
+sum+= number%10;						//sum = 2+3
+number/=10;							//number = 9
+sum+= number%10;						//sum= 5+9 = 14
+
+
+System.out.print("Sum of the digits of the integer : "+sum);
+}
+}
