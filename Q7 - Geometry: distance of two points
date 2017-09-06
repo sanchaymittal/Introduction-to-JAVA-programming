@@ -1,0 +1,57 @@
+/*
+Q7. (Geometry: distance of two points) 
+Write a program that prompts the user to enter two points (x1, y1) and (x2, y2) and displays their distance between them.
+*/
+
+import java.util.Scanner;
+import java.lang.Math;			//Import packages
+
+class inp{					//Class 1  - For inputs
+
+int x,y;					//private variables
+
+inp()						//constructor
+						// inp() constructor will help to get input whenever a object of this class is generated 
+{
+Scanner sc = new Scanner(System.in);
+x=sc.nextInt();
+y=sc.nextInt();
+}
+}
+
+
+class cal					//Class 2 - For Calculation
+{
+double dis;
+
+cal()						//Constructor for default intialization
+{
+dis =0.0d;					//As in Java datatype value is automaticaly drops if value needs are satisfied in lower datatype 
+						//There are specific suffixes for long (e.g. 39832L), float (e.g. 2.4f) and double (e.g. -7.832d).
+}
+
+double calculation(inp p1,inp p2)
+{
+dis=  Math.sqrt(Math.pow((p2.x-p1.x),2)+Math.pow((p2.y-p1.y),2));   //For Calculation
+return dis;
+}
+}
+
+class q7					//Class 3 - Main Class
+{
+
+public static void main(String args[])
+{
+
+double distance;
+System.out.print("Enter the Co-ordinates of first point(x,y) : ");
+inp p1 = new inp();
+System.out.print("Enter the Co-ordinates of Second point(x,y) : ");
+inp p2 = new inp();
+
+cal c = new cal();
+distance = c.calculation(p1,p2);
+System.out.print("Distance between points is : "+ distance);
+
+}
+}
