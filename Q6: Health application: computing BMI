@@ -1,0 +1,40 @@
+/*
+Q6: (Health application: computing BMI)
+Body Mass Index (BMI) is a measure of health on weight.
+It can be calculated by taking your weight in kilograms and dividing
+by the square of your height in meters.Write a program that prompts 
+the user to enter a weight in pounds and height in inches and displays the BMI.
+Note that one pound is 0.45359237 kilograms and one inch is 0.0254 meters
+*/
+
+
+import java.util.Scanner;
+import java.lang.Math;
+class q6
+{
+	public static void main(String args[])
+	{
+	Scanner sc= new Scanner(System.in);
+	double weight,height,bmi;
+	
+	System.out.print("Enter Weight(Pounds) : ");
+	weight = sc.nextDouble();
+
+	System.out.print("Enter Height(Inches) : ");
+	height = sc.nextDouble();
+	
+	bmi = (weight*0.45359237)/Math.pow((0.0254*height),2);
+	
+	System.out.print("BMI : "+bmi);
+
+}
+}
+
+	
+	
+	
+
+
+
+
+
