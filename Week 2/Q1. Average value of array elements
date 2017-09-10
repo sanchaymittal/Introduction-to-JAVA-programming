@@ -1,0 +1,29 @@
+/*
+1.Write a Java program to calculate the average value of array elements.
+*/
+
+
+import java.util.Scanner;
+
+
+class q1{
+
+public static void main(String args[]){
+
+int a[] = new int[100];
+
+Scanner sc = new Scanner(System.in);
+
+int i,n,sum=0;
+System.out.print("Enter number of elements in the Array : ");
+n=sc.nextInt();
+
+System.out.println("Enter elements of array");
+for(i=0;i<n;i++)
+{a[i] = sc.nextInt();
+sum+=a[i];
+}
+
+System.out.print("Average of array elments : "+(float)sum/n);
+}
+}
